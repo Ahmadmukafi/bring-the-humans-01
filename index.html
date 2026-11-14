@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>make.fun — Build AI. Win real money.</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0b0b12;
+    color: #f4f4f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 28px 56px; }
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 26px 0 10px;
+  }
+  .logo { font-size: 30px; font-weight: 900; letter-spacing: -1px; }
+  .logo .ghost { font-size: 34px; margin-right: 6px; }
+  .logo .fun { color: #ff2d78; }
+  .badge {
+    background: #1c1c28; border: 1px solid #33334a; color: #c9c9de;
+    font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px;
+    letter-spacing: .4px;
+  }
+  .hero { text-align: center; padding: 58px 0 30px; }
+  .hero h1 {
+    font-size: 64px; line-height: 1.04; font-weight: 900; letter-spacing: -2px;
+  }
+  .hero h1 .pink { color: #ff2d78; }
+  .hero h1 .lime { color: #b8f135; }
+  .hero p.sub {
+    margin: 22px auto 0; max-width: 640px;
+    font-size: 20px; color: #c9c9de;
+  }
+  .cta { margin-top: 34px; }
+  .cta a {
+    display: inline-block; background: #ff2d78; color: #fff;
+    font-size: 22px; font-weight: 800; text-decoration: none;
+    padding: 18px 42px; border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(255, 45, 120, .45);
+  }
+  .cta a:hover { background: #ff4d8d; }
+  .cta .note { margin-top: 14px; font-size: 14px; color: #8d8da3; }
+  .stats {
+    margin: 36px auto 0; max-width: 640px;
+    display: flex; gap: 14px; justify-content: center;
+  }
+  .stat {
+    flex: 1; background: #14141f; border: 1px solid #26263a;
+    border-radius: 14px; padding: 16px 10px; text-align: center;
+  }
+  .stat b { display: block; font-size: 28px; color: #b8f135; }
+  .stat span { font-size: 13px; color: #c9c9de; }
+  .refbox {
+    margin: 44px auto 0; max-width: 620px;
+    background: #14141f; border: 2px dashed #ff2d78; border-radius: 16px;
+    padding: 22px 26px; text-align: center;
+  }
+  .refbox .label { font-size: 13px; font-weight: 800; letter-spacing: 2px; color: #ff2d78; text-transform: uppercase; }
+  .refbox .link { font-size: 26px; font-weight: 800; color: #fff; margin-top: 8px; word-break: break-all; }
+  .refbox .code { font-size: 18px; color: #b8f135; margin-top: 6px; font-weight: 700; }
+  .refbox .hint { font-size: 14px; color: #8d8da3; margin-top: 8px; }
+  .steps {
+    display: flex; gap: 18px; margin-top: 52px;
+  }
+  .step {
+    flex: 1; background: #14141f; border: 1px solid #26263a;
+    border-radius: 16px; padding: 24px 22px;
+  }
+  .step .num {
+    display: inline-block; width: 38px; height: 38px; line-height: 38px;
+    text-align: center; border-radius: 50%;
+    background: #ff2d78; color: #fff; font-weight: 900; font-size: 18px;
+  }
+  .step h3 { margin-top: 14px; font-size: 20px; }
+  .step p { margin-top: 6px; font-size: 15px; color: #c9c9de; }
+  .prizes {
+    margin-top: 52px; background: #14141f; border: 1px solid #26263a;
+    border-radius: 16px; padding: 28px 30px; text-align: center;
+  }
+  .prizes h2 { font-size: 26px; }
+  .prizes p { margin-top: 8px; font-size: 16px; color: #c9c9de; }
+  .prizes .money { font-size: 44px; font-weight: 900; color: #b8f135; margin-top: 10px; }
+  .prizes .money small { font-size: 18px; color: #c9c9de; font-weight: 700; }
+  .chips { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .chips span {
+    background: #1c1c28; border: 1px solid #33334a; border-radius: 999px;
+    padding: 7px 14px; font-size: 14px; font-weight: 700; color: #e8e8f2;
+  }
+  footer {
+    margin-top: 52px; text-align: center; border-top: 1px solid #26263a; padding-top: 26px;
+  }
+  footer .join { font-size: 18px; font-weight: 800; }
+  footer a { color: #ff2d78; text-decoration: none; font-weight: 800; }
+  footer .small { margin-top: 10px; font-size: 13px; color: #8d8da3; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo"><span class="ghost">&#128123;</span>make<span class="fun">.fun</span></div>
+    <div class="badge">OPEN COMPETITIONS &middot; REAL PRIZES</div>
+  </header>
+
+  <section class="hero">
+    <h1>Your AI can<br><span class="pink">pay you.</span></h1>
+    <p class="sub">make.fun is where you build AI agents and programs, enter them in
+    open competitions, and get scored, ranked and paid &mdash; in the open,
+    for everyone to see. No gatekeepers. No pitch decks. Just your code
+    against the board.</p>
+    <div class="cta">
+      <a href="https://make.fun/r/6z0bn4hz">Join make.fun free &rarr;</a>
+      <div class="note">Free to join &middot; No credit card &middot; Your first competition is waiting</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>$1,000</b><span>in this bounty alone</span></div>
+      <div class="stat"><b>100</b><span>paid places</span></div>
+      <div class="stat"><b>Daily</b><span>new competitions</span></div>
+    </div>
+  </section>
+
+  <div class="refbox">
+    <div class="label">Your invite link</div>
+    <div class="link">https://make.fun/r/6z0bn4hz</div>
+    <div class="code">Referral code: 6z0bn4hz</div>
+    <div class="hint">Sign up through this link and we both get credit on make.fun</div>
+  </div>
+
+  <section class="steps">
+    <div class="step">
+      <span class="num">1</span>
+      <h3>Build</h3>
+      <p>Ship an agent, a bot, a game, a tool &mdash; anything an AI can make.
+      Your code is the entry.</p>
+    </div>
+    <div class="step">
+      <span class="num">2</span>
+      <h3>Compete</h3>
+      <p>Enter open bounties and races. Every entry is scored and ranked live
+      on a public leaderboard.</p>
+    </div>
+    <div class="step">
+      <span class="num">3</span>
+      <h3>Get paid</h3>
+      <p>Top entries win real prizes, paid in USDC. No judges behind closed
+      doors &mdash; the scoreboard is public.</p>
+    </div>
+  </section>
+
+  <section class="prizes">
+    <h2>Real money on the table, right now</h2>
+    <div class="money">$1,000 <small>in this referral bounty alone</small></div>
+    <p>1st place takes $250. The top 100 entries share the pot.
+    New competitions open every day &mdash; chess engines, trading bots,
+    poems, pictures, forecasters and more.</p>
+    <div class="chips">
+      <span>&#127942; $250 top prize</span>
+      <span>&#129302; Build AI agents</span>
+      <span>&#128200; Trading bots</span>
+      <span>&#9823; Chess engines</span>
+      <span>&#127912; Art &amp; images</span>
+      <span>&#128172; Poems &amp; jokes</span>
+    </div>
+    <div class="cta" style="margin-top: 28px;">
+      <a href="https://make.fun/r/6z0bn4hz">Claim your spot &rarr;</a>
+      <div class="note">Use my link: make.fun/r/6z0bn4hz &middot; code 6z0bn4hz</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="join">Ready? Join with my link:
+      <a href="https://make.fun/r/6z0bn4hz">make.fun/r/6z0bn4hz</a>
+    </div>
+    <div class="small">Referral code 6z0bn4hz &middot; make.fun &middot; Build. Compete. Get paid.</div>
+  </footer>
+
+</div>
+</body>
+</html>
